@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.jsonwebtoken:jjwt:unknown">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/jsonwebtoken/jjwt/unknown/jjwt-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/io/jsonwebtoken/jjwt/unknown/jjwt-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/jsonwebtoken/jjwt/unknown/jjwt-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

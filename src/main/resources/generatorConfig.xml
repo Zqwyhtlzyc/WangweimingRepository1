@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration> 
+     <!--这个路径放的是maven仓库存放mysql连接jar的路径 -->   
+    <classPathEntry
+            location="D:\repository\org\mybatis\generator\mybatis-generator-core\1.3.7\mybatis-generator-core-1.3.7.jar"/>
+    <context id="context" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressDate" value="false"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+
+        <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/property?serverTimezone=UTC"
+                        userId="root"
+                        password="33334444"/>
+
+                            <!--某个project下面的目录路径，就是生成的实体放到了哪个路径下面 -->
+        <javaModelGenerator targetPackage="com.imooc.demo.Generator"
+                            targetProject="C:\Users\72717\IdeaProjects\demo\src\main\java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+                            <!--某个project下面的目录路径，就是生成mapper.xml放到了哪个路径下面 -->
+        <sqlMapGenerator targetPackage="Generator"
+                         targetProject="C:\Users\72717\IdeaProjects\demo\src\main\resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+                           <!--某个project下面的目录路径，就是生成dao层interface放到了哪个路径下面 -->
+        <javaClientGenerator targetPackage="com.imooc.demo.Generator.dao"
+                             targetProject="C:\Users\72717\IdeaProjects\demo\src\main\java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!--<table tableName="T_FEE_AGTBILL" domainObjectName="FeeAgentBill"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false"/>-->
+			   
+                     <!--domainObjectName是生成类名，tableName是数据库表名称 -->
+        <table selectByExampleQueryId="true" enableSelectByExample="true" enableDeleteByExample="false"
+               enableUpdateByExample="true" enableCountByExample="true"
+               domainObjectName="SysIsvConfig" tableName="sys_isv_config">
+            <!--<columnRenamingRule searchString="^D_"
+                                replaceString=""/>-->
+        </table>
+
+    </context>
+</generatorConfiguration>
